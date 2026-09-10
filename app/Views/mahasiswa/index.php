@@ -32,7 +32,7 @@
                             <td><?= $mhs['nama']; ?></td>
                             <td><?= $mhs['prodi']; ?></td>
                             <td>
-                                <a href="?url=mahasiswa/detail&nim=<?= $mhs['nim']; ?>" class="btn btn-primary btn-sm">
+                                <a href="/si-akademik/public/mahasiswa/detail?nim=<?= $mhs['nim']; ?>" class="btn btn-primary btn-sm">
                                     Detail
                                 </a>
                             </td>

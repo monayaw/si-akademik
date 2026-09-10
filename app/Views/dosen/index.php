@@ -36,7 +36,7 @@
                 </tbody>
             </table>
         </div>
-        <a href="?url=mahasiswa" class="btn btn-primary">
+        <a href="si-akademik/public/mahasiswa" class="btn btn-primary">
             Data Mahasiswa
         </a>
     </div>
