@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <h1>Sistem Informasi Akademik</h1>
+
+    <p>
+        Selamat datang,
+        <strong><?= $_SESSION['username'] ?></strong>.
+    </p>
+
+    <hr>
+
+    <div class="d-flex gap-2">
+
+        <a href="/si-akademik/public/mahasiswa"
+           class="btn btn-primary">
+            Mahasiswa
+        </a>
+
+        <a href="/si-akademik/public/dosen"
+           class="btn btn-success">
+            Dosen
+        </a>
+
+        <a href="/si-akademik/public/logout"
+           class="btn btn-danger">
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
