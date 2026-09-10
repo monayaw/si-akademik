@@ -7,19 +7,23 @@ class Dosen
         return [
             [
                 'nidn' => '001',
-                'nama' => 'Bu Qonita'
+                'nama' => 'Bu Qonita',
+                'prodi' => 'Teknik Informatika'
             ],
             [
                 'nidn' => '002',
-                'nama' => 'Pak Radit'
+                'nama' => 'Pak Radit',
+                'prodi' => 'Teknik Informatika'
             ],
             [
                 'nidn' => '003',
-                'nama' => 'Bu Ulfa'
+                'nama' => 'Bu Ulfa',
+                'prodi' => 'Teknik Informatika'
             ],
             [
                 'nidn' => '004',
-                'nama' => 'Pak Fikri'
+                'nama' => 'Pak Fikri',
+                'prodi' => 'Teknik Informatika'
             ]
         ];
     }

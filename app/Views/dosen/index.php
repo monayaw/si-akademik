@@ -21,6 +21,7 @@
                     <tr>
                         <th>NIDN</th>
                         <th>Nama</th>
+                        <th>Program Studi</th>
                     </tr>
                 </thead>
 
@@ -29,6 +30,7 @@
                         <tr>
                             <td><?= $dsn['nidn']; ?></td>
                             <td><?= $dsn['nama']; ?></td>
+                            <td><?= $dsn['prodi']; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
