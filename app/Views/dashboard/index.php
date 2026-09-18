@@ -26,12 +26,12 @@
 
         <a href="/si-akademik/public/mahasiswa"
            class="btn btn-primary">
-            Mahasiswa
+            Data Mahasiswa
         </a>
 
         <a href="/si-akademik/public/dosen"
            class="btn btn-success">
-            Dosen
+            Data Dosen
         </a>
 
         <a href="/si-akademik/public/logout"
