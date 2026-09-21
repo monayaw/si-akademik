@@ -50,7 +50,7 @@
                             </td>
 
                             <td>
-                                <?= htmlspecialchars($mhs['nama_dosen'] ?? 'Belum ada dosen'); ?>
+                                <?= htmlspecialchars($mhs['nama_dosen'] ?? '-'); ?>
                             </td>
 
                             <td>
