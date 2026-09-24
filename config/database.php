@@ -1,14 +1,35 @@
 <?php
 
-$host = 'localhost';
-$dbname = 'si_akademik';
-$username = 'root';
-$password = '';
+class Database
+{
+    private $pdo;
 
-$pdo = new PDO(
-    "mysql:host=$host;dbname=$dbname",
-    $username,
-    $password
-);
+    public function __construct()
+    {
+        $host = 'localhost';
+        $dbname = 'si_akademik';
+        $username = 'root';
+        $password = '';
 
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->pdo = new PDO(
+            "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+            $username,
+            $password
+        );
+
+        $this->pdo->setAttribute(
+            PDO::ATTR_ERRMODE,
+            PDO::ERRMODE_EXCEPTION
+        );
+    }
+
+    public function getConnection()
+    {
+        return $this->pdo;
+    }
+}
+
+
+// Koneksi untuk Model Dosen yang masih menggunakan $pdo
+$database = new Database();
+$pdo = $database->getConnection();

@@ -2,10 +2,24 @@
 
 require_once __DIR__ . '/../config/database.php';
 
+require_once __DIR__ . '/../app/Models/Mahasiswa.php';
+require_once __DIR__ . '/../app/Repositories/MahasiswaRepository.php';
+
 require_once __DIR__ . '/../app/Controllers/MahasiswaController.php';
 require_once __DIR__ . '/../app/Controllers/DosenController.php';
 require_once __DIR__ . '/../app/Controllers/AuthController.php';
 require_once __DIR__ . '/../app/Middleware/AuthMiddleware.php';
+
+
+// =========================
+// OBJECT COMPOSITION
+// =========================
+
+$database = new Database();
+
+$mahasiswaRepository = new MahasiswaRepository($database);
+
+$mahasiswaController = new MahasiswaController($mahasiswaRepository);
 
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -81,8 +95,7 @@ else if ($uri === '/mahasiswa') {
     $middleware = new AuthMiddleware();
     $middleware->handle();
 
-    $controller = new MahasiswaController();
-    $controller->index();
+    $mahasiswaController->index();
 
 }
 
@@ -96,8 +109,7 @@ else if ($uri === '/mahasiswa/detail') {
     $middleware = new AuthMiddleware();
     $middleware->handle();
 
-    $controller = new MahasiswaController();
-    $controller->detail();
+    $mahasiswaController->detail();
 
 }
 
@@ -165,6 +177,7 @@ else if ($uri === '/dosen/delete' && isset($_GET['id'])) {
     $controller->delete($_GET['id']);
 
 }
+
 
 // =========================
 // 404
